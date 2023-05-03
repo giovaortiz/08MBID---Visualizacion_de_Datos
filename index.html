@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Operaciones Financieras con sospecha de Fraude</title>
+
+    <!-- load d3 and dimple libraries -->
+    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
+
+    <!-- add styles to text and graphics -->
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Operaciones Financieras con sospecha de Fraude </h1>
+    <h4 class="main-autor">Nombre: Giovanny Ortiz</h3>
+    <h4 class="main-url">Url: <a href="https://js-dnpas5.stackblitz.io/">https://js-dnpas5.stackblitz.io/</a></h3>
+    <h4 class="main-fuente">Fuente: <a href="https://www.kaggle.com/datasets/dermisfit/fraud-transactions-dataset/">https://www.kaggle.com/datasets/dermisfit/fraud-transactions-dataset/</a></h3> 
+     
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Introducción</h2>
+        <div class="text">
+        Este proyecto es aplicar el uso de herramientas de visualización con diferentes tipos de graficas para una audiencia especifica y que sirva como elemento de toma de decisiones.
+        <div id="plotContainer4">    
+        </div class="text"> 
+        Personalmente es un ejercicio que permitirá poner en práctica las diferentes herramientas, estudiadas en la materia y ponerlas en uso de cara a un ejercicio real.
+        </div>
+
+    <!-- add intro text to the page body -->
+    <div class="summary">
+        <h2 class="text-title">Objetivo del Estudio</h2>
+        <div class="text">
+        El objetivo del estudio es desagregar las operaciones ocurridas el 1 de enero de 2019 e identificar los intentos de fraude que permita tomar acciones y minimizar estos intentos.
+        <div id="plotContainer4">    
+          
+        </div class="text">  
+        El público objetivo es la Dirección de Riesgos y Seguridad de Información quienes con este informe podrán identificar y sectorizar donde se están presentando mayores vulnerabilidades. Se espera que la información suministrada permita generar herramienta para la toma de decisiones y focalizar esfuerzos para contener las posibles operaciones fraudulentas.
+        </div>
+
+<!-- The second bar chart -->
+<h2 class="plot-title">Análisis del Estudio</h2>
+<div id="plotContainer4">
+<div class="text">
+    Para el 1 de enero de 2019 de la 00:00 a las 23:59 se generaron un total de 2410 operaciones en diferentes establecimientos comerciales, de las cuales 305 quedaron marcadas como posible operación fraudulenta. La siguiente grafica muestra porcentualmente el volumen de operaciones.
+</div>
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnE7Mnr0FQoOwM9I8cHaKHnOy96Cxy0W813WiNGEiAUsnhhyGs_8rh2lFFm2yzOfvIBZoPoXr5jN__/pubchart?oid=857899843&amp;format=interactive"></iframe>
+
+<!-- The second bar chart -->
+<h2 class="plot-title">Distribución Geográfica</h2>
+<div id="plotContainer4">
+<div class="text">
+    Para mejorar su identificación sobre un mapa de Estados Unidos se presenta los puntos donde geográficamente se reportaron estas operaciones. Cabe destacar que los puntos de mayor densidad y en azul más claro es donde por el monto de la operación es más alto. 
+</div>
+
+<iframe title="Ciudades de EE.UU con Intentos de Fraude" aria-label="Map" id="datawrapper-chart-RQr4P" src="https://datawrapper.dwcdn.net/RQr4P/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="452" data-external="1"></iframe>
+
+<!-- The second bar chart -->
+<h2 class="plot-title">Análisis por Estado</h2>
+<div id="plotContainer4">
+<div class="text">
+    Para mejorar la sectorización de la información se realiza un análisis por estado dejando el Top 10 con el mayor número de operaciones como muestra la siguiente gráfica:
+</div>
+
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnE7Mnr0FQoOwM9I8cHaKHnOy96Cxy0W813WiNGEiAUsnhhyGs_8rh2lFFm2yzOfvIBZoPoXr5jN__/pubchart?oid=918950107&amp;format=interactive"></iframe>
+
+<div id="plotContainer4">
+    <div class="text">
+        Se destaca el estado de New York, Virginia, Pensilvania, Iowa y Michigan como los cinco estados con mayor número de operaciones sospechosas.
+    </div>
+<!-- The second bar chart -->
+<h2 class="plot-title">Análisis por Sectores</h2>
+<div id="plotContainer4">
+<div class="text">
+    Se mostrará un análisis de los sectores desde los cuales se ha identificado mayor intento de operaciones fraudulentas.  
+</div>
+
+<iframe src="https://cdn.datamatic.io/runtime/echarts/3.7.2_413/embedded/index.html#id=110071280527575527510/1s1OYOwXBzTpYtfTmsnKgDA1vh0_khXA1" frameborder="0" width="100%" height="545" allowtransparency="true"></iframe>
+
+<div class="text">
+    Como muestra el diagrama de árbol existen dos sectores con el mayor número de operaciones grosery_pos (comestibles) y gas_transport, equivalentes casi al 29.86% del total de las operaciones sospechosas por lo cual seria conveniente que se enfoquen esfuerzos en estos sectores.  
+</div>
+
+<!-- The second bar chart -->
+<h2 class="plot-title">Establecimientos con mas intentos de Fraude</h2>
+<div id="plotContainer4">
+<div class="text">
+    El siguiente grafico nos muestra lso establecimientos con mayor número de intentos de fraude en el periodo en mención. 
+</div>
+
+<iframe width="729" height="450" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSnE7Mnr0FQoOwM9I8cHaKHnOy96Cxy0W813WiNGEiAUsnhhyGs_8rh2lFFm2yzOfvIBZoPoXr5jN__/pubchart?oid=30385015&amp;format=interactive"></iframe>
+<br>
+
+<div class="text">
+    Teniendo en cuenta que se focaliza en siete (7) establecimientos se considera oportuno tener una acercamiento y apoyar con alguna campaña de ciberseguridad que permita minimizar los riesgos. 
+</div>
+
+</div>
+<!-- add outro text to the page body -->
+    <div class="Conclusiones">
+        <h2 class="text-title">Conclusiones</h2>
+        <div class="text">
+            <p>Para el equipo de Dirección de Riesgos y Seguridad de Información cuentan con un panorama mas claro sobre las regiones geograficas, sectores, esatblecimientos sobre los cuales deben enfocar sus esfuerzos y tomar las medidas necesarias para mininmizar los intentos de fraude financiero
+            <div id="plotContainer4">    
+            </div class="text"> 
+            A nivel del trabajo de la asignatura se reforzo el usos de las herramientas y se evidencio como puede ser un medio para trasmitir de forma gráfica información muy relevante para el negocio
+            </p>
+            </br>
+        </div>
+    </div>
+
+<div class="Herramientas Utilizadas">
+    <h2 class="text-title">Anexos</h2>
+    <div class="text">    
+
+</div>
+<!-- add outro text to the page body -->
+    <div class="Herramientas Utilizadas">
+        <h2 class="text-title">Herramientas Utilizadas</h2>
+        <div class="text">
+            <p>Google SpreadSheet: Programa de hoja de cálculo como parte del paquete de herramientas de Google.
+        <div class="text">
+        <p>Data Wrapper: Plataforma utilizada para la edición de gráficas y mapas geográficos.
+            </div>    
+            Datamatic.io: Herramienta con algunos segmentos gratuitos para realizar el mapa de arbol.
+            </div>
+            </p>
+            </br>
+        </div>
+    </div>
+
+    <!-- The second bar chart -->
+<h2 class="plot-title">Fuente de Datos</h2>
+<div id="plotContainer4">
+<div class="text">
+    Los datos fueron obtenidos de Kaggle donde se analizan mas de 100.000 operaciones en un periodo de 18 meses. Para efectos de este ejercicio se tomo solamente un dia de operaciones equivalente a 2410 datos los cuales considere sufientes para visualizar información
+</div>
+    
+</body>
+</html>
+
